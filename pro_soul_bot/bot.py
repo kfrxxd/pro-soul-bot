@@ -12,15 +12,13 @@ dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def start(message: types.Message):
-
+    
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [
                 InlineKeyboardButton(
                     text="Открыть приложение",
-                    web_app=WebAppInfo(
-                        url="https://t.me/pro_soulBot/pro_soul"
-                    )
+                    url="https://t.me/pro_soulBot?startapp=pro_soul"
                 )
             ]
         ]
